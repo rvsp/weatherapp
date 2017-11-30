@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'e*6i5h=1fzohqm#fpatjl84_+k^0x@h3r%(ufuw#qp@8rk2-7y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['awsfore.herokuapp.com']
 
 
 # Application definition
