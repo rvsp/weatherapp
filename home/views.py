@@ -26,7 +26,6 @@ class Home_view(View):
 		return render(request,'home.html',context)
 
 
-
 	def post(self,request, *args , **kwargs):
 		form = SearchPlace(request.POST)
 		weather = Weather()
@@ -44,6 +43,7 @@ class Home_view(View):
 					context={
 						'form':form,
 						'forecasts':forecasts,
+						'va':val
 					}
 					return render(request,'test.html',context)
 				except:
