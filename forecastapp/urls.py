@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from home. views import Home_view
+from home. views import Home_view, fun_view
 from contact. views import Contact_View
 urlpatterns = [
-	url(r'^$', Home_view, name="home"),
+    #url(r'^$', fun_view, name="home"),
+	url(r'^$', Home_view.as_view(), name="home"),
 	url(r'^contact/', Contact_View, name="contact"),
     url(r'^admin/', admin.site.urls),
 ]

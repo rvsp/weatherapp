@@ -9,7 +9,7 @@
     <title>Weather | Data</title>
     {% load static %}
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">    
   </head>
 <body>
@@ -39,23 +39,33 @@
 			<div class="hero" data-bg-image="{% static 'images/bans.png' %}">
 				<div class="container">
 				<!-- django csrf tokec -->
-					<form action="" method="post" class="find-location">
-					{% csrf_token %}{{form}}
-    					<input type="text" id="locate" name="locate" placeholder="Find your location...">
+					<form action="" method="POST" class="find-location">
+					{% csrf_token %} {{ form.as_p }}
     					<input type="submit" value="Find">
 					</form>
 
 				</div>
 			</div>
-			
+
 			<div class="forecast-table">
 				<div class="container">
+					<div class="md-3 col-md-offset-5">
+						table work under progress
+					</div>
+				</div>
+			</div>
+<!--
+			<div class="forecast-table">
+				<div class="container">
+
 					<div class="forecast-container">
+
 						<div class="today forecast">
 							<div class="forecast-header">
+							
 								<div class="day">Monday</div>
 								<div class="date">6 Oct</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="location">New York</div>
 								<div class="degree">
@@ -64,15 +74,12 @@
 										<img src="{% static 'images/icons/icon-1.svg' %}" alt="" width=90>
 									</div>	
 								</div>
-								<!--<span><img src="{% static 'images/icon-umberella.png' %}" alt="">20%</span>
-								<span><img src="{% static 'images/icon-wind.png' %}" alt="">18km/h</span>
-								<span><img src="{% static 'images/icon-compass.png' %}" alt="">East</span>-->
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Tuesday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-3.svg' %}" alt="" width=48>
@@ -84,7 +91,7 @@
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Wednesday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-5.svg' %}" alt="" width=48>
@@ -96,7 +103,7 @@
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Thursday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-7.svg'%}" alt="" width=48>
@@ -108,7 +115,7 @@
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Friday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-12.svg'%}" alt="" width=48>
@@ -120,7 +127,7 @@
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Saturday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-13.svg'%}" alt="" width=48>
@@ -132,7 +139,7 @@
 						<div class="forecast">
 							<div class="forecast-header">
 								<div class="day">Sunday</div>
-							</div> <!-- .forecast-header -->
+							</div> <!-- .forecast-header ->
 							<div class="forecast-content">
 								<div class="forecast-icon">
 									<img src="{% static 'images/icons/icon-14.svg'%}" alt="" width=48>
@@ -143,14 +150,13 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 		</div>
 		
 		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 		<script src="{% static 'js/plugins.js' %}"></script>
 		<script src="{% static 'js/app.js' %}"></script>
-		
 	</body>
 
 </html>
